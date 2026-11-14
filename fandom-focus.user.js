@@ -8,6 +8,10 @@
 // @run-at       document-start
 // @grant        none
 // @icon         https://www.fandom.com/favicon.ico
+// @homepageURL  https://github.com/arprge/cleanfandom
+// @supportURL   https://github.com/arprge/cleanfandom/issues
+// @updateURL    https://raw.githubusercontent.com/arprge/cleanfandom/main/fandom-focus.user.js
+// @downloadURL  https://raw.githubusercontent.com/arprge/cleanfandom/main/fandom-focus.user.js
 // ==/UserScript==
 
 (() => {
