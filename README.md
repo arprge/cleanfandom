@@ -13,7 +13,7 @@ Fork of fandom focus
 ## Installation
 
 1. Install [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/)
-2. **[Click here](https://raw.githubusercontent.com/arprge/fandom-focus/refs/heads/main/fandomFocus.user.js)**
+2. **[Click here](https://raw.githubusercontent.com/arprge/fandom-focus/refs/heads/main/fandom-focus.user.js)**
 
 ## License
 
