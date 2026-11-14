@@ -1,2 +1,3 @@
 # cleanfandom
-fandomfocus fork
+
+Minimal repository for the **Fandom Focus** userscript.
