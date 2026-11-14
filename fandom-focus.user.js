@@ -1,17 +1,18 @@
 // ==UserScript==
-// @name         Fandom Focus
-// @namespace    https://greasyfork.org/users/1426714
-// @version      4.1
+// @name         CleanFandom
+// @namespace    https://github.com/arprge/cleanfandom
+// @version      4.1.0
 // @description  Restore Fandom to a clean, readable, and distraction-free layout.
 // @author       Alan
 // @match        *://*.fandom.com/*
 // @run-at       document-start
 // @grant        none
+// @license      MIT
 // @icon         https://www.fandom.com/favicon.ico
 // @homepageURL  https://github.com/arprge/cleanfandom
 // @supportURL   https://github.com/arprge/cleanfandom/issues
-// @updateURL    https://raw.githubusercontent.com/arprge/cleanfandom/main/fandom-focus.user.js
-// @downloadURL  https://raw.githubusercontent.com/arprge/cleanfandom/main/fandom-focus.user.js
+// @updateURL    https://github.com/arprge/cleanfandom/raw/refs/heads/main/fandom-focus.user.js
+// @downloadURL  https://github.com/arprge/cleanfandom/raw/refs/heads/main/fandom-focus.user.js
 // ==/UserScript==
 
 (() => {
