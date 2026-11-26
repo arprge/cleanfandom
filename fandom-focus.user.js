@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CleanFandom
 // @namespace    https://github.com/arprge/cleanfandom
-// @version      4.1.0
+// @version      4.1.1
 // @description  Restore Fandom to a clean, readable, and distraction-free layout.
 // @author       Alan
 // @match        *://*.fandom.com/*
@@ -17,6 +17,11 @@
 
 (() => {
     'use strict';
+
+    // Bail out on non-HTML responses (e.g. JSON or XML endpoints)
+    if (document.contentType && !document.contentType.includes('html')) {
+        return;
+    }
 
     const STYLE_ID = 'fandom-focus-styles';
 
@@ -91,14 +96,17 @@
         }
     `;
 
-    function injectStyles() {
+    const injectStyles = () => {
         if (document.getElementById(STYLE_ID)) return;
+
+        const target = document.head || document.documentElement;
+        if (!target) return;
 
         const style = document.createElement('style');
         style.id = STYLE_ID;
         style.textContent = focusCSS;
-        (document.head || document.documentElement).appendChild(style);
-    }
+        target.appendChild(style);
+    };
 
     injectStyles();
 
