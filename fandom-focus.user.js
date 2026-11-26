@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CleanFandom
 // @namespace    https://github.com/arprge/cleanfandom
-// @version      4.1.1
+// @version      4.1.2
 // @description  Restore Fandom to a clean, readable, and distraction-free layout.
 // @author       Alan
 // @match        *://*.fandom.com/*
@@ -39,6 +39,7 @@
         .bottom-ads-container,
         .ad-slot-placeholder,
         .gpt-ad,
+        #featured-video__player-container,
         .featured-video__wrapper,
         #connatix_player,
         .cnx-main-container,
@@ -64,6 +65,10 @@
         .app-wrapper,
         .base-layout-wrapper {
             margin-left: 0 !important;
+        }
+
+        .fandom-sticky-header {
+            left: 0 !important;
         }
 
         .main-container {
