@@ -23,8 +23,6 @@
         return;
     }
 
-    const STYLE_ID = 'fandom-focus-styles';
-
     const focusCSS = `
         /* 1. Hide left explore rail, right rail, 2026 rail toggle, modals, ads, and floating video */
         #global-explore-navigation,
@@ -102,10 +100,21 @@
     `;
 
     const injectStyles = () => {
+        if ('adoptedStyleSheets' in document) {
+            const sheet = new CSSStyleSheet();
+            sheet.replaceSync(focusCSS);
+            document.adoptedStyleSheets.push(sheet);
+            return;
+        }
+
+        const STYLE_ID = 'fandom-focus-styles';
         if (document.getElementById(STYLE_ID)) return;
 
         const target = document.head || document.documentElement;
-        if (!target) return;
+        if (!target) {
+            document.addEventListener('DOMContentLoaded', injectStyles, { once: true });
+            return;
+        }
 
         const style = document.createElement('style');
         style.id = STYLE_ID;
@@ -114,8 +123,4 @@
     };
 
     injectStyles();
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', injectStyles, { once: true });
-    }
 })();
